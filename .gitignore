@@ -1,3 +1,6 @@
+# Temporarily ignore all Examples, because there currently isn't any
+Examples/
+
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudio,visualstudiocode,rider,csharp
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudio,visualstudiocode,rider,csharp
 
