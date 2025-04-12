@@ -41,9 +41,7 @@ namespace JS1Framework
         {
             MelonLogger.Msg("Loading JS1Framework...");
 
-            MelonLogger.Msg("Starting Harmony patching...");
             HarmonyPatch();
-            MelonLogger.Msg("Harmony patching complete.");
 
             MelonLogger.Msg("JS1Framework loaded successfully.");
         }
