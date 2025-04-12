@@ -11,10 +11,6 @@ using ScheduleOne;
 using JS1Framework;
 using ScheduleOne.ItemFramework;
 
-/*
-    Everything in this example is currently temporary for testing purposes only.
-    In the future, this will be moved out of here and handled by JS1Framework.
-*/
 namespace ExampleAxe
 {
     internal class EntryPoint : MelonMod
