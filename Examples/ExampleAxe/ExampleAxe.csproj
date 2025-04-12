@@ -17,13 +17,13 @@
 
 
   <ItemGroup Condition="'$(Configuration)' == 'Debug'">
-    <Reference Include="JS1Framework-Mod">
+    <Reference Include="JS1Framework">
       <HintPath>$(MSBuildProjectDirectory)\..\..\JS1Framework-Mod\bin\Debug\net472\JS1Framework.dll</HintPath>
     </Reference>
   </ItemGroup>
 
   <ItemGroup Condition="'$(Configuration)' == 'Release'">
-    <Reference Include="JS1Framework-Mod">
+    <Reference Include="JS1Framework">
       <HintPath>$(MSBuildProjectDirectory)\..\..\JS1Framework-Mod\bin\Release\net472\JS1Framework.dll</HintPath>
     </Reference>
   </ItemGroup>
