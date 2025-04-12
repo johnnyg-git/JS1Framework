@@ -42,7 +42,7 @@ namespace ExampleAxe
             AssetBundle assetBundle = AssetBundle.LoadFromStream(stream);
             stream.Close();
 
-            StorableItemDefinition axeDefinition = assetBundle.LoadAsset<StorableItemDefinition>("Axe");
+            StorableItemDefinition axeDefinition = assetBundle.LoadAsset<StorableItemDefinition>("CustomAxe.asset");
 
             weaponOption = new DialogueController_ArmsDealer.WeaponOption()
             {
