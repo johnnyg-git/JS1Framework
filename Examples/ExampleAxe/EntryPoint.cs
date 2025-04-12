@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 using System.Reflection;
 
 using UnityEngine;
-using HarmonyLib;
 using MelonLoader;
 using ScheduleOne;
 using JS1Framework;
 using ScheduleOne.ItemFramework;
-using ScheduleOne.Dialogue;
 
 /*
     Everything in this example is currently temporary for testing purposes only.
@@ -21,26 +19,11 @@ namespace ExampleAxe
 {
     internal class EntryPoint : MelonMod
     {
-        internal static DialogueController_ArmsDealer.WeaponOption weaponOption;
-
-        static HarmonyLib.Harmony harmony;
-
-
         public override void OnInitializeMelon()
         {
             MelonLogger.Msg("Loading ExampleAxe...");
 
-            harmony = new HarmonyLib.Harmony("com.johnnyjohnny.exampleaxe");
-            harmony.PatchAll();
-
-            var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("ExampleAxe.res.customaxe");
-            if (stream == null)
-            {
-                return;
-            }
-
-            AssetBundle assetBundle = AssetBundle.LoadFromStream(stream);
-            stream.Close();
+            AssetBundle assetBundle = AssetBundleLoader.LoadAssetBundleResource(Assembly.GetExecutingAssembly(), "ExampleAxe.res.customaxe");
 
             StorableItemDefinition axeDefinition = assetBundle.LoadAsset<StorableItemDefinition>("CustomAxe.asset");
 
