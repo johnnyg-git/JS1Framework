@@ -30,7 +30,7 @@ namespace ExampleAxe
         {
             MelonLogger.Msg("Loading ExampleAxe...");
 
-            harmony = new HarmonyLib.Harmony("com.johnnyjohnny.revealcounterchance");
+            harmony = new HarmonyLib.Harmony("com.johnnyjohnny.exampleaxe");
             harmony.PatchAll();
 
             var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("ExampleAxe.res.customaxe");
@@ -44,37 +44,9 @@ namespace ExampleAxe
 
             StorableItemDefinition axeDefinition = assetBundle.LoadAsset<StorableItemDefinition>("CustomAxe.asset");
 
-            weaponOption = new DialogueController_ArmsDealer.WeaponOption()
-            {
-                Name = axeDefinition.name,
-                Item = axeDefinition,
-                Price = 69,
-                IsAvailable = true
-            };
+            ArmsDealer.AddWeaponOption(ArmsDealer.WeaponType.Melee, "CustomAxe", 69, axeDefinition);
 
             MelonLogger.Msg("ExampleAxe loaded");
-        }
-    }
-
-    [HarmonyPatch(typeof(DialogueController_ArmsDealer))]
-    class ArmsDealerPatch
-    {
-        public static List<DialogueController_ArmsDealer> patched = new List<DialogueController_ArmsDealer>();
-
-        [HarmonyPatch("Awake")]
-        [HarmonyPrefix]
-        static void ArmsDealerAwakePatch(DialogueController_ArmsDealer __instance)
-        {
-            if (patched.Contains(__instance))
-                return;
-
-            if (EntryPoint.weaponOption == null)
-                return;
-
-            __instance.MeleeWeapons.Add(EntryPoint.weaponOption);
-
-
-            patched.Add(__instance);
         }
     }
 }
