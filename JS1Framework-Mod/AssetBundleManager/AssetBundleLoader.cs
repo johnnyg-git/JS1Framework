@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Reflection;
 
 using UnityEngine;
+using MelonLoader;
 
 namespace JS1Framework
 {
@@ -16,6 +17,8 @@ namespace JS1Framework
         /// </summary>
         public static AssetBundle LoadAssetBundleResource(Assembly assembly, string resourcePath)
         {
+            MelonLogger.Msg($"Loading asset bundle from resource: {resourcePath} in {assembly.FullName}");
+
             // Get the stream for the embedded resource
             var stream = assembly.GetManifestResourceStream(resourcePath);
             if (stream == null)
@@ -34,7 +37,17 @@ namespace JS1Framework
                 return null;
             }
 
+            MelonLoader.MelonLogger.Msg($"Successfully loaded asset bundle: {resourcePath}");
+
             return assetBundle;
+        }
+
+        /// <summary>
+        /// Loads an AssetBundle from an embedded resource inside the calling assembly.
+        /// </summary>
+        public static AssetBundle LoadAssetBundleResource(string resourcePath)
+        {
+            return LoadAssetBundleResource(Assembly.GetCallingAssembly(), resourcePath);
         }
     }
 }

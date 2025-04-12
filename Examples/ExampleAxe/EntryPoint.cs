@@ -23,7 +23,7 @@ namespace ExampleAxe
         {
             MelonLogger.Msg("Loading ExampleAxe...");
 
-            AssetBundle assetBundle = AssetBundleLoader.LoadAssetBundleResource(Assembly.GetExecutingAssembly(), "ExampleAxe.res.customaxe");
+            AssetBundle assetBundle = AssetBundleLoader.LoadAssetBundleResource("ExampleAxe.res.customaxe");
 
             StorableItemDefinition axeDefinition = assetBundle.LoadAsset<StorableItemDefinition>("CustomAxe.asset");
 
