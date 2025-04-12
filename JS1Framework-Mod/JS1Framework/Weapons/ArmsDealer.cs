@@ -25,7 +25,7 @@ namespace JS1Framework
             Ammo,
         }
 
-        internal static Dictionary<WeaponType, List<WeaponOption>> WeaponOptions = new Dictionary<WeaponType, List<DialogueController_ArmsDealer.WeaponOption>>()
+        internal static Dictionary<WeaponType, List<WeaponOption>> WeaponOptions = new Dictionary<WeaponType, List<WeaponOption>>()
         {
             { WeaponType.Ranged, new List<WeaponOption>() },
             { WeaponType.Melee, new List<WeaponOption>() },
@@ -57,7 +57,7 @@ namespace JS1Framework
     [HarmonyPatch(typeof(DialogueController_ArmsDealer))]
     class ArmsDealerPatches
     {
-        static List<DialogueController_ArmsDealer> patched = new List<DialogueController_ArmsDealer>();
+        static HashSet<DialogueController_ArmsDealer> patched = new HashSet<DialogueController_ArmsDealer>();
 
         [HarmonyPatch("Awake")]
         [HarmonyPrefix]
@@ -66,34 +66,31 @@ namespace JS1Framework
             MelonLogger.Msg("Patching arms dealer...");
 
             // If this arms dealer has already been patched, skip this instance
-            if (patched.Contains(__instance))
+            if (!patched.Add(__instance))
                 return;
 
-            // Add all new melee weapons to the arms dealer
-            foreach (WeaponOption meleeOption in ArmsDealer.WeaponOptions[ArmsDealer.WeaponType.Melee])
+            // Loop through the weapon options and add them to the appropriate lists
+            foreach (KeyValuePair<ArmsDealer.WeaponType, List<WeaponOption>> weaponTypeListPair in ArmsDealer.WeaponOptions)
             {
-                MelonLogger.Msg($"Adding {meleeOption.Name} to melee weapons.");
-                __instance.MeleeWeapons.Add(meleeOption);
-            }
-
-            // Add all new ranged weapons to the arms dealer
-            foreach (WeaponOption rangedOption in ArmsDealer.WeaponOptions[ArmsDealer.WeaponType.Ranged])
-            {
-                MelonLogger.Msg($"Adding {rangedOption.Name} to ranged weapons.");
-                __instance.RangedWeapons.Add(rangedOption);
-            }
-
-            // Add all new ammo to the arms dealer
-            foreach (WeaponOption ammoOption in ArmsDealer.WeaponOptions[ArmsDealer.WeaponType.Ammo])
-            {
-                MelonLogger.Msg($"Adding {ammoOption.Name} to ammo.");
-                __instance.Ammo.Add(ammoOption);
+                foreach (WeaponOption weaponOption in weaponTypeListPair.Value)
+                {
+                    MelonLogger.Msg($"Adding {weaponOption.Name} to {weaponTypeListPair.Key} weapons.");
+                    switch (weaponTypeListPair.Key)
+                    {
+                        case ArmsDealer.WeaponType.Melee:
+                            __instance.MeleeWeapons.Add(weaponOption);
+                            break;
+                        case ArmsDealer.WeaponType.Ranged:
+                            __instance.RangedWeapons.Add(weaponOption);
+                            break;
+                        case ArmsDealer.WeaponType.Ammo:
+                            __instance.Ammo.Add(weaponOption);
+                            break;
+                    }
+                }
             }
 
             MelonLogger.Msg("Arms dealer patched successfully.");
-
-            // Add this instance to the patched list
-            patched.Add(__instance);
         }
     }
 }
