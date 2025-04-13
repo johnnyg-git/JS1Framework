@@ -1,0 +1,35 @@
+{
+    "name": "Example Weapons",
+    "assetBundles": [
+        {
+            "bundleDirectory": "customaxe",
+            "assets": [
+                {
+                    "assetName": "CustomAxe.asset",
+                    "assetType": "ScheduleOne.ItemFramework.StorableItemDefinition, Assembly-CSharp",
+                    "processor": {
+                        "$type": "JS1Framework.Core.ModHandling.Processors.ArmsDealerProcessor, JS1Framework",
+                        "weaponType": "Melee",
+                        "name": "Custom Axe",
+                        "price": 69
+                    }
+                }
+            ]
+        },
+        {
+            "bundleDirectory": "custompistol",
+            "assets": [
+                {
+                    "assetName": "CustomPistol.asset",
+                    "assetType": "ScheduleOne.ItemFramework.StorableItemDefinition, Assembly-CSharp",
+                    "processor": {
+                        "$type": "JS1Framework.Core.ModHandling.Processors.ArmsDealerProcessor, JS1Framework",
+                        "weaponType": "Ranged",
+                        "name": "Custom Pistol",
+                        "price": 69
+                    }
+                }
+            ]
+        }
+    ]
+}
