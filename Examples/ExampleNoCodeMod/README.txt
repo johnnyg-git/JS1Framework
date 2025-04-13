@@ -1,0 +1,1 @@
+This folder should go into the JS1FrameworkMods folder inside you root game directory
