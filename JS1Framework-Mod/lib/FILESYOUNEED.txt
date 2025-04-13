@@ -6,6 +6,7 @@ The files you need are:
 -- These are located in "YourGameDirectory/MelonLoader/net35" --
 0Harmony.dll
 MelonLoader.dll
+Newtonsoft.Json.dll
 
 -- These are located in YourGameDirectory/Schedule I_Data/Managed --
 Assembly-Csharp.dll

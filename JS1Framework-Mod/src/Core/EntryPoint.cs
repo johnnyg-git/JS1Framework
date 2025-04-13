@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 using MelonLoader;
 
+using JS1Framework.Core.ModHandling;
+using JS1Framework.Utils;
+using System.IO;
+
 namespace JS1Framework.Core
 {
     internal class EntryPoint : MelonMod
@@ -14,7 +18,9 @@ namespace JS1Framework.Core
         {
             MelonLogger.Msg("Loading JS1Framework...");
 
-            // Do stuff in the future
+            PathUtils.Initialize();
+
+            ModManager.Initialize();
 
             MelonLogger.Msg("JS1Framework loaded successfully.");
         }

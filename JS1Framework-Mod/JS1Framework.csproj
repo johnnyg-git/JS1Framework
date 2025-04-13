@@ -10,6 +10,7 @@
 
     <Reference Include="$(MSBuildProjectDirectory)\lib\0Harmony.dll" />
     <Reference Include="$(MSBuildProjectDirectory)\lib\MelonLoader.dll" />
+    <Reference Include="$(MSBuildProjectDirectory)\lib\Newtonsoft.Json.dll" />
     <Reference Include="$(MSBuildProjectDirectory)\lib\UnityEngine*.dll" />
 
     <Reference Include="$(MSBuildProjectDirectory)\lib\Assembly-CSharp.dll" Private="false" Publicize="true" />

@@ -31,7 +31,7 @@ namespace JS1Framework.Utils
             var stream = assembly.GetManifestResourceStream(resourcePath);
             if (stream == null)
             {
-                MelonLoader.MelonLogger.Error($"Failed to load asset bundle: {resourcePath}");
+                MelonLogger.Error($"Failed to load asset bundle: {resourcePath}");
                 return null;
             }
 
@@ -41,11 +41,11 @@ namespace JS1Framework.Utils
 
             if (assetBundle == null)
             {
-                MelonLoader.MelonLogger.Error($"Failed to load asset bundle from stream: {resourcePath}");
+                MelonLogger.Error($"Failed to load asset bundle from stream: {resourcePath}");
                 return null;
             }
 
-            MelonLoader.MelonLogger.Msg($"Successfully loaded asset bundle: {resourcePath}");
+            MelonLogger.Msg($"Successfully loaded asset bundle: {resourcePath}");
 
             return assetBundle;
         }
