@@ -8,8 +8,10 @@ using System.Reflection;
 using UnityEngine;
 using MelonLoader;
 using ScheduleOne;
-using JS1Framework;
 using ScheduleOne.ItemFramework;
+
+using JS1Framework.Utils;
+using JS1Framework.Shops;
 
 namespace ExampleAxe
 {
@@ -19,11 +21,11 @@ namespace ExampleAxe
         {
             MelonLogger.Msg("Loading ExampleAxe...");
 
-            AssetBundle assetBundle = AssetBundleLoader.LoadAssetBundleResource("ExampleAxe.res.customaxe");
+            AssetBundle assetBundle = AssetBundleHelper.LoadAssetBundleResource("ExampleAxe.res.customaxe");
 
             StorableItemDefinition axeDefinition = assetBundle.LoadAsset<StorableItemDefinition>("CustomAxe.asset");
 
-            ArmsDealer.AddWeaponOption(ArmsDealer.WeaponType.Melee, "CustomAxe", 69, axeDefinition);
+            ArmsDealer.AddWeaponOption(WeaponType.Melee, "CustomAxe", 69, axeDefinition);
 
             MelonLogger.Msg("ExampleAxe loaded");
         }

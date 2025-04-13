@@ -8,13 +8,21 @@ using System.Reflection;
 using UnityEngine;
 using MelonLoader;
 
-namespace JS1Framework
+namespace JS1Framework.Utils
 {
-    public static class AssetBundleLoader
+    /// <summary>
+    /// Provides helper methods for loading AssetBundles
+    /// </summary>
+    public static class AssetBundleHelper
     {
         /// <summary>
-        /// Loads an AssetBundle from an embedded resource inside the specified assembly.
+        /// Loads an AssetBundle from an embedded resource within the specified assembly.
         /// </summary>
+        /// <param name="assembly">The assembly containing the embedded resource.</param>
+        /// <param name="resourcePath">The path to the embedded resource.</param>
+        /// <returns>
+        /// The loaded AssetBundle if successful; otherwise, null.
+        /// </returns>
         public static AssetBundle LoadAssetBundleResource(Assembly assembly, string resourcePath)
         {
             MelonLogger.Msg($"Loading asset bundle from resource: {resourcePath} in {assembly.FullName}");
@@ -43,8 +51,13 @@ namespace JS1Framework
         }
 
         /// <summary>
-        /// Loads an AssetBundle from an embedded resource inside the calling assembly.
+        /// Loads an AssetBundle from an embedded resource within the calling assembly.
         /// </summary>
+        /// <param name="resourcePath">The path to the embedded resource.</param>
+        /// <returns>
+        /// The loaded AssetBundle if successful; otherwise, null.
+        /// </returns>
+
         public static AssetBundle LoadAssetBundleResource(string resourcePath)
         {
             return LoadAssetBundleResource(Assembly.GetCallingAssembly(), resourcePath);

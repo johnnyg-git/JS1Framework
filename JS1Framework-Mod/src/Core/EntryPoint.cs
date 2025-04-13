@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using MelonLoader;
 
-namespace JS1Framework
+namespace JS1Framework.Core
 {
     internal class EntryPoint : MelonMod
     {

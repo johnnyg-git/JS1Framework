@@ -11,19 +11,12 @@ using ScheduleOne;
 using ScheduleOne.ItemFramework;
 using ScheduleOne.Dialogue;
 
-namespace JS1Framework
+namespace JS1Framework.Shops
 {
     using WeaponOption = DialogueController_ArmsDealer.WeaponOption;
 
     public static class ArmsDealer
     {
-
-        public enum WeaponType
-        {
-            Ranged,
-            Melee,
-            Ammo,
-        }
 
         internal static Dictionary<WeaponType, List<WeaponOption>> WeaponOptions = new Dictionary<WeaponType, List<WeaponOption>>()
         {
@@ -70,20 +63,20 @@ namespace JS1Framework
                 return;
 
             // Loop through the weapon options and add them to the appropriate lists
-            foreach (KeyValuePair<ArmsDealer.WeaponType, List<WeaponOption>> weaponTypeListPair in ArmsDealer.WeaponOptions)
+            foreach (KeyValuePair<WeaponType, List<WeaponOption>> weaponTypeListPair in ArmsDealer.WeaponOptions)
             {
                 foreach (WeaponOption weaponOption in weaponTypeListPair.Value)
                 {
                     MelonLogger.Msg($"Adding {weaponOption.Name} to {weaponTypeListPair.Key} weapons.");
                     switch (weaponTypeListPair.Key)
                     {
-                        case ArmsDealer.WeaponType.Melee:
+                        case WeaponType.Melee:
                             __instance.MeleeWeapons.Add(weaponOption);
                             break;
-                        case ArmsDealer.WeaponType.Ranged:
+                        case WeaponType.Ranged:
                             __instance.RangedWeapons.Add(weaponOption);
                             break;
-                        case ArmsDealer.WeaponType.Ammo:
+                        case WeaponType.Ammo:
                             __instance.Ammo.Add(weaponOption);
                             break;
                     }

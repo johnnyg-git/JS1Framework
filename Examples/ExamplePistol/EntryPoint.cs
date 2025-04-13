@@ -8,8 +8,10 @@ using System.Reflection;
 using UnityEngine;
 using MelonLoader;
 using ScheduleOne;
-using JS1Framework;
 using ScheduleOne.ItemFramework;
+
+using JS1Framework.Utils;
+using JS1Framework.Shops;
 
 namespace ExamplePistol
 {
@@ -19,13 +21,13 @@ namespace ExamplePistol
         {
             MelonLogger.Msg("Loading ExamplePistol...");
 
-            AssetBundle assetBundle = AssetBundleLoader.LoadAssetBundleResource("ExamplePistol.res.custompistol");
+            AssetBundle assetBundle = AssetBundleHelper.LoadAssetBundleResource("ExamplePistol.res.custompistol");
 
             StorableItemDefinition pistolDefinition = assetBundle.LoadAsset<StorableItemDefinition>("CustomPistol.asset");
             StorableItemDefinition ammoDefinitionz = assetBundle.LoadAsset<StorableItemDefinition>("CustomPistolAmmo.asset");
 
-            ArmsDealer.AddWeaponOption(ArmsDealer.WeaponType.Ranged, "Custom Pistol", 690, pistolDefinition);
-            ArmsDealer.AddWeaponOption(ArmsDealer.WeaponType.Ammo, "Custom Ammo", 690, ammoDefinitionz);
+            ArmsDealer.AddWeaponOption(WeaponType.Ranged, "Custom Pistol", 690, pistolDefinition);
+            ArmsDealer.AddWeaponOption(WeaponType.Ammo, "Custom Ammo", 690, ammoDefinitionz);
 
             MelonLogger.Msg("ExamplePistol loaded");
         }
