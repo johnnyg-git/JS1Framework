@@ -1,0 +1,12 @@
+{
+    "DataType": "PropertyData",
+    "DataVersion": 0,
+    "GameVersion": "0.3.0",
+    "PropertyCode": "bungalow",
+    "IsOwned": false,
+    "SwitchStates": [
+        false,
+        false
+    ],
+    "ToggleableStates": []
+}

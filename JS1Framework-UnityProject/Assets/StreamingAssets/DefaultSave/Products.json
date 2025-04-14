@@ -1,0 +1,11 @@
+{
+    "DataType": "ProductManagerData",
+    "DataVersion": 0,
+    "GameVersion": "0.1.0",
+    "DiscoveredProducts": [
+        "ogkush"
+    ],
+    "ListedProducts": [
+        "ogkush"
+    ]
+}

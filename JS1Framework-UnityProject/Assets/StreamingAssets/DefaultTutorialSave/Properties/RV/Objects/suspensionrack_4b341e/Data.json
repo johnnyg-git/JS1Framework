@@ -1,0 +1,14 @@
+{
+    "DataType": "GridItemData",
+    "DataVersion": 0,
+    "GameVersion": "0.3.0",
+    "GUID": "4b341e8d-8538-428c-8694-399a328f06b9",
+    "ItemString": "{\n    \"DataType\": \"ItemData\",\n    \"DataVersion\": 0,\n    \"GameVersion\": \"0.3.0\",\n    \"ID\": \"suspensionrack\",\n    \"Quantity\": 1\n}",
+    "LoadOrder": 0,
+    "GridGUID": "f7694a89-9468-41be-bccd-91fe27cbe5e7",
+    "OriginCoordinate": {
+        "x": 0.0,
+        "y": 0.0
+    },
+    "Rotation": 0
+}

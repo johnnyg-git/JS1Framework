@@ -1,0 +1,8 @@
+{
+  "name": "AeLa.EasyFeedback",
+  "references": [
+    "UnityEngine.UI",
+    "Unity.TextMeshPro"
+  ],
+  "allowUnsafeCode": true
+}

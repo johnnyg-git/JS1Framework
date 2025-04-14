@@ -1,0 +1,29 @@
+{
+    "DataType": "PotData",
+    "DataVersion": 0,
+    "GameVersion": "0.2.5f4",
+    "GUID": "78ec1f47-07da-424d-82a9-1e83dad20de3",
+    "ItemString": "{\n    \"DataType\": \"ItemData\",\n    \"DataVersion\": 0,\n    \"GameVersion\": \"0.2.5f4\",\n    \"ID\": \"plasticpot\",\n    \"Quantity\": 1\n}",
+    "LoadOrder": 0,
+    "GridGUID": "f7694a89-9468-41be-bccd-91fe27cbe5e7",
+    "OriginCoordinate": {
+        "x": 1.0,
+        "y": 0.0
+    },
+    "Rotation": -90,
+    "SoilID": "soil",
+    "SoilLevel": 20.0,
+    "RemainingSoilUses": 1,
+    "WaterLevel": 1.5000038146972658,
+    "AppliedAdditives": [],
+    "PlantData": {
+        "DataType": "PlantData",
+        "DataVersion": 0,
+        "GameVersion": "0.2.5f4",
+        "SeedID": "ogkushseed",
+        "GrowthProgress": 0.4,
+        "YieldLevel": 0.6700000166893005,
+        "QualityLevel": 0.44999998807907107,
+        "ActiveBuds": []
+    }
+}

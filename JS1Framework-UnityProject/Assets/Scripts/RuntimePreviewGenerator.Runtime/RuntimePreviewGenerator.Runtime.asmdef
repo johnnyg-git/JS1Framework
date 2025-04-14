@@ -1,0 +1,5 @@
+{
+  "name": "RuntimePreviewGenerator.Runtime",
+  "references": [],
+  "allowUnsafeCode": true
+}

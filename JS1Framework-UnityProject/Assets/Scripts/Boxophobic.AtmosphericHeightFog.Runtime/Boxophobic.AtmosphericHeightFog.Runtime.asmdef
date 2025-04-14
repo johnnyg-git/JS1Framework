@@ -1,0 +1,7 @@
+{
+  "name": "Boxophobic.AtmosphericHeightFog.Runtime",
+  "references": [
+    "Boxophobic.Utils.Scripts"
+  ],
+  "allowUnsafeCode": true
+}

@@ -1,0 +1,8 @@
+{
+  "name": "AeLa.EasyFeedback.Demo",
+  "references": [
+    "UnityEngine.UI",
+    "AeLa.EasyFeedback"
+  ],
+  "allowUnsafeCode": true
+}

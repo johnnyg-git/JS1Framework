@@ -1,0 +1,20 @@
+{
+    "DataType": "SurfaceItemData",
+    "DataVersion": 0,
+    "GameVersion": "0.3.3f15 Alternate",
+    "GUID": "69731087-74bd-45d9-859e-e1890136024e",
+    "ItemString": "{\n    \"DataType\": \"ItemData\",\n    \"DataVersion\": 0,\n    \"GameVersion\": \"0.3.3f15 Alternate\",\n    \"ID\": \"wallclock\",\n    \"Quantity\": 1\n}",
+    "LoadOrder": 25,
+    "ParentSurfaceGUID": "628640ef-390a-4694-8ce2-6136e703ce11",
+    "RelativePosition": {
+        "x": -0.23851507902145387,
+        "y": 0.5000171661376953,
+        "z": 0.27612030506134035
+    },
+    "RelativeRotation": {
+        "x": 0.0,
+        "y": 0.7071065306663513,
+        "z": 0.7071070075035095,
+        "w": 0.0
+    }
+}

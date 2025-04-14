@@ -1,0 +1,21 @@
+{
+    "DataType": "MSGConversationData",
+    "DataVersion": 0,
+    "GameVersion": "0.1.0",
+    "ConversationIndex": 0,
+    "Read": false,
+    "MessageHistory": [
+        {
+            "Sender": 1,
+            "MessageID": -1372110411,
+            "Text": "Hello, I'm after 2x OG Kush. I can pay <color=#46CB4F>$60</color> for it.",
+            "EndOfChain": true
+        }
+    ],
+    "ActiveResponses": [
+        {
+            "Text": "Yep",
+            "Label": "ACCEPT_CONTRACT"
+        }
+    ]
+}

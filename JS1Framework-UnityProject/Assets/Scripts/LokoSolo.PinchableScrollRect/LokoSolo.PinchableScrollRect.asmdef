@@ -1,0 +1,7 @@
+{
+  "name": "LokoSolo.PinchableScrollRect",
+  "references": [
+    "UnityEngine.UI"
+  ],
+  "allowUnsafeCode": true
+}

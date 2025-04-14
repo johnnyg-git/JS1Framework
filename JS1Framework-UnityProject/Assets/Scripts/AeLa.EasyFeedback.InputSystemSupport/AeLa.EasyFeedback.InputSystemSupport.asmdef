@@ -1,0 +1,9 @@
+{
+  "name": "AeLa.EasyFeedback.InputSystemSupport",
+  "references": [
+    "AeLa.EasyFeedback",
+    "Unity.InputSystem",
+    "UnityEngine.UI"
+  ],
+  "allowUnsafeCode": true
+}

@@ -1,0 +1,7 @@
+{
+  "name": "FishNet.Runtime",
+  "references": [
+    "GameKit.Utilities"
+  ],
+  "allowUnsafeCode": true
+}

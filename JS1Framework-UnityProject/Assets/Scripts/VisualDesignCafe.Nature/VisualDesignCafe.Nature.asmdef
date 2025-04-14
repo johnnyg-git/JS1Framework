@@ -1,0 +1,7 @@
+{
+  "name": "VisualDesignCafe.Nature",
+  "references": [
+    "VisualDesignCafe.ShaderX"
+  ],
+  "allowUnsafeCode": true
+}

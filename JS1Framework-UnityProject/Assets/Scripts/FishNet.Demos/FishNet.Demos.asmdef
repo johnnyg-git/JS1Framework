@@ -1,0 +1,9 @@
+{
+  "name": "FishNet.Demos",
+  "references": [
+    "FishNet.Runtime",
+    "GameKit.Utilities",
+    "UnityEngine.UI"
+  ],
+  "allowUnsafeCode": true
+}

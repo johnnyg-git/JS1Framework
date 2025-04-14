@@ -1,0 +1,9 @@
+{
+  "name": "GameKit.Utilities",
+  "references": [
+    "UnityEngine.UI",
+    "GameKit.Dependencies",
+    "Unity.TextMeshPro"
+  ],
+  "allowUnsafeCode": true
+}

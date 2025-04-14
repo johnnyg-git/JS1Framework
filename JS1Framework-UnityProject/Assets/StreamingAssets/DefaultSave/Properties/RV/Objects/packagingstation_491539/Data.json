@@ -1,0 +1,21 @@
+{
+    "DataType": "PackagingStationData",
+    "DataVersion": 0,
+    "GameVersion": "0.2.5f4",
+    "GUID": "4915398b-5135-4d64-8887-0faa09392534",
+    "ItemString": "{\n    \"DataType\": \"ItemData\",\n    \"DataVersion\": 0,\n    \"GameVersion\": \"0.2.5f4\",\n    \"ID\": \"packagingstation\",\n    \"Quantity\": 1\n}",
+    "LoadOrder": 0,
+    "GridGUID": "a2d8a32d-1ddc-4920-a74e-bdb63f10272e",
+    "OriginCoordinate": {
+        "x": 0.0,
+        "y": 6.0
+    },
+    "Rotation": 90,
+    "Contents": {
+        "Items": [
+            "{\"DataType\":\"ItemData\",\"DataVersion\":0,\"GameVersion\":\"0.2.5f4\",\"ID\":\"baggie\",\"Quantity\":10}",
+            "{\"DataType\":\"ItemData\",\"DataVersion\":0,\"GameVersion\":\"0.2.5f4\",\"ID\":\"\",\"Quantity\":0}",
+            "{\"DataType\":\"ItemData\",\"DataVersion\":0,\"GameVersion\":\"0.2.5f4\",\"ID\":\"\",\"Quantity\":0}"
+        ]
+    }
+}

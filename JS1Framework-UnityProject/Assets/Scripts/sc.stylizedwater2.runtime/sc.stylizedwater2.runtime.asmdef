@@ -1,0 +1,9 @@
+{
+  "name": "sc.stylizedwater2.runtime",
+  "references": [
+    "Unity.Mathematics",
+    "Unity.RenderPipelines.Universal.Runtime",
+    "Unity.RenderPipelines.Core.Runtime"
+  ],
+  "allowUnsafeCode": true
+}
