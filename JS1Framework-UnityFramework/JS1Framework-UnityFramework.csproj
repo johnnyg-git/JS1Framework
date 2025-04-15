@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net472</TargetFramework>
+    <Configuration>Release</Configuration>
+    <Configurations>Release</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)'=='Release'">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="$(MSBuildProjectDirectory)\lib\UnityEngine*.dll" />
+    <Reference Include="$(MSBuildProjectDirectory)\lib\Assembly-CSharp.dll"/>
+  </ItemGroup>
+
+  <Target Name="CopyToUnityProject" AfterTargets="Build">
+    <PropertyGroup>
+      <UnityProjectPath>$(MSBuildProjectDirectory)\..\JS1Framework-UnityProject\Assets\JS1Framework</UnityProjectPath>
+    </PropertyGroup>
+    
+    <ItemGroup>
+      <FilesToCopy Include="$(OutputPath)$(AssemblyName).dll" />
+      <FilesToCopy Include="$(OutputPath)$(AssemblyName).pdb" Condition="Exists('$(OutputPath)$(AssemblyName).pdb')" />
+    </ItemGroup>
+    
+    <MakeDir Directories="$(UnityProjectPath)" Condition="!Exists('$(UnityProjectPath)')" />
+    <Copy SourceFiles="@(FilesToCopy)" DestinationFolder="$(UnityProjectPath)" />
+    <Message Text="Copied $(AssemblyName).dll to Unity project at $(UnityProjectPath)" Importance="high" />
+  </Target>
+</Project>

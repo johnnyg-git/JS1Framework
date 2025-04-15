@@ -1,0 +1,13 @@
+All libraries come from MelonLoader or Schedule1. So in order to build, you must find these libraries in your game directory and place them here.
+This mod is made for the alternate branch of Schedule1. So ensure you are on that.
+
+The files you need are:
+
+-- These are located in YourGameDirectory/Schedule I_Data/Managed --
+Assembly-Csharp.dll
+
+ALL UnityEngine dlls, e.g. "UnityEngine.CoreModule.dll", "UnityEngine.VehiclesModule.dll"
+Whilst you can just add the ones that this project uses, it is a lot easier to just add all of them. So I will not be listing out each individual UnityEngine dll
+
+All dlls should be placed inside of the lib directory
+Any dlls inside of the lib directory are automatically added as a reference

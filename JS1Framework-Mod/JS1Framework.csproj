@@ -14,6 +14,7 @@
     <Reference Include="$(MSBuildProjectDirectory)\lib\UnityEngine*.dll" />
 
     <Reference Include="$(MSBuildProjectDirectory)\lib\Assembly-CSharp.dll" Private="false" Publicize="true" />
+    <ProjectReference Include="$(MSBuildProjectDirectory)\..\JS1Framework-UnityFramework\JS1Framework-UnityFramework.csproj" />
   </ItemGroup>
 
 

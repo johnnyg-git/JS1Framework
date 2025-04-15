@@ -1,0 +1,17 @@
+{
+    "name": "Item Pack Hi",
+    "assetBundles": [
+        {
+            "bundleDirectory": "itempack",
+            "assets": [
+                {
+                    "assetName": "ItemPack.asset",
+                    "assetType": "JS1Framework.UnityFramework.UnityMod, JS1Framework-UnityFramework",
+                    "processor": {
+                        "$type": "JS1Framework.Core.ModHandling.Processors.UnityModProcessor, JS1Framework"
+                    }
+                }
+            ]
+        }
+    ]
+}
